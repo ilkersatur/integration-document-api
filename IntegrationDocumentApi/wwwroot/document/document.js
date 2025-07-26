@@ -48,7 +48,7 @@ function showContentBySubmenuId(submenuId) {
         // --- Form sarmalama sonu ---
 
         // --- Belirli kelimeleri vurgulama ---
-        const wordsToHighlight = ['okUrl', 'failUrl', 'TDS Merchant Gateway', 'HTML Form Post', 'tarayıcı tabanlı', 'HTTP POST'];
+        //const wordsToHighlight = ['okUrl', 'failUrl', 'TDS Merchant Gateway', 'HTML Form Post', 'tarayıcı tabanlı', 'HTTP POST'];
         const highlightClass = 'highlight-param';
 
         function highlightTextNodes(node) {
@@ -56,14 +56,14 @@ function showContentBySubmenuId(submenuId) {
                 let text = node.nodeValue;
                 let changed = false;
 
-                wordsToHighlight.forEach(word => {
-                    const regex = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
+                //wordsToHighlight.forEach(word => {
+                //    const regex = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
 
-                    if (regex.test(text)) {
-                        text = text.replace(regex, `<span class="${highlightClass}">$1</span>`);
-                        changed = true;
-                    }
-                });
+                //    if (regex.test(text)) {
+                //        text = text.replace(regex, `<span class="${highlightClass}">$1</span>`);
+                //        changed = true;
+                //    }
+                //});
 
                 if (changed) {
                     const tempSpan = document.createElement('span');
