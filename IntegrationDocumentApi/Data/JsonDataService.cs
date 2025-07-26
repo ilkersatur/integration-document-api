@@ -3,13 +3,17 @@
 namespace IntegrationDocumentApi.Data
 {
 
-    public class JsonDataService<T>
+    public class JsonDataService<T> where T : class
     {
         private readonly string _filePath;
+        private readonly Func<T, int> _getId;
+        private readonly Action<T, int> _setId;
 
-        public JsonDataService(string filePath)
+        public JsonDataService(string filePath, Func<T, int> getId, Action<T, int> setId)
         {
             _filePath = filePath;
+            _getId = getId;
+            _setId = setId;
         }
 
         public List<T> Load()
@@ -30,6 +34,8 @@ namespace IntegrationDocumentApi.Data
         public void Add(T item)
         {
             var list = Load();
+            int nextId = list.Any() ? list.Max(_getId) + 1 : 1;
+            _setId(item, nextId);
             list.Add(item);
             Save(list);
         }
