@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\document\\document.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\document\\document.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\document\\document.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\document\\document.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\document\\document.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\document\\document.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\document\\document.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\document\\document.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\document\\document.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\document\\document.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|c:\\users\\ilkers\\desktop\\integration-document-api\\integrationdocumentapi\\wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6EFE6774-3A2E-4F17-82D8-89887CC9DF0D}|IntegrationDocumentApi.csproj|solutionrelative:wwwroot\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "document.html",
               "DocumentMoniker": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
               "RelativeDocumentMoniker": "wwwroot\\document\\document.html",
               "ToolTip": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
               "RelativeToolTip": "wwwroot\\document\\document.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-26T14:40:43.344Z",
               "IsPinned": true,
@@ -40,13 +44,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "document.css",
               "DocumentMoniker": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
               "RelativeDocumentMoniker": "wwwroot\\document\\document.css",
               "ToolTip": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
               "RelativeToolTip": "wwwroot\\document\\document.css",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAcwGoAAAAKAAAA",
+              "ViewState": "AQIAACIBAAAAAAAAAAAqwEMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-07-26T14:40:50.742Z",
               "IsPinned": true,
@@ -60,10 +64,23 @@
               "RelativeDocumentMoniker": "wwwroot\\document\\document.js",
               "ToolTip": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.js",
               "RelativeToolTip": "wwwroot\\document\\document.js",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEkAAAAeAAAA",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAAAMMAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-26T14:40:49.537Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\style.css",
+              "ToolTip": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
+              "RelativeToolTip": "wwwroot\\style.css",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAqwBwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-26T18:27:14.705Z",
               "EditorCaption": ""
             },
             {

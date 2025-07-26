@@ -12,15 +12,13 @@ const menuListEl = document.getElementById('menuList');
 const contentEl = document.getElementById('content');
 
 // İçerik gösterme fonksiyonu, Markdown + HTML destekli
-// showContentBySubmenuId fonksiyonunuzu güncelleyin
-// showContentBySubmenuId fonksiyonunuzu güncelleyin
 function showContentBySubmenuId(submenuId) {
-    // ... (mevcut kodlar)
+    // Aktif alt menüyü işaretle
+    document.querySelectorAll('.submenu-item.active').forEach(el => el.classList.remove('active'));
+    const activeEl = document.querySelector(`.submenu-item[data-submenuid='${submenuId}']`);
+    if (activeEl) activeEl.classList.add('active');
 
-    const submenuObj = submenus.find(sm => sm.id === submenuId);
     const contentObj = contents.find(c => c.submenuId === submenuId);
-
-    const headerTitle = submenuObj ? submenuObj.title : 'İçerik';
 
     if (contentObj) {
         marked.setOptions({
@@ -37,7 +35,7 @@ function showContentBySubmenuId(submenuId) {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = rawHtmlContent;
 
-        // --- Adım 1: Formları sarmalama (önceki cevaptaki kod) ---
+        // --- Formları sarmalama ---
         const forms = tempDiv.querySelectorAll('form');
         forms.forEach(form => {
             if (!form.closest('.api-form-card')) {
@@ -49,20 +47,16 @@ function showContentBySubmenuId(submenuId) {
         });
         // --- Form sarmalama sonu ---
 
-        // --- Adım 2: Belirli kelimeleri vurgulama için yeni kısım ---
-        const wordsToHighlight = ['okUrl', 'failUrl', 'TDS Merchant Gateway']; // Vurgulanacak kelimeler
-        const highlightClass = 'highlight-param'; // Vurgu için kullanacağımız CSS sınıfı
+        // --- Belirli kelimeleri vurgulama ---
+        const wordsToHighlight = ['okUrl', 'failUrl', 'TDS Merchant Gateway', 'HTML Form Post', 'tarayıcı tabanlı', 'HTTP POST'];
+        const highlightClass = 'highlight-param';
 
-        // İçerik elementindeki metin node'larını gezmek için yardımcı fonksiyon
-        // Bu, HTML etiketlerinin içine girmeden sadece metinleri değiştirmemizi sağlar.
         function highlightTextNodes(node) {
-            if (node.nodeType === Node.TEXT_NODE) { // Sadece metin node'larını kontrol et
+            if (node.nodeType === Node.TEXT_NODE) {
                 let text = node.nodeValue;
                 let changed = false;
 
                 wordsToHighlight.forEach(word => {
-                    // Kelimeyi büyük/küçük harf duyarsız arama ve sadece tam kelime olarak bulma
-                    // \b kelime sınırı regex'idir.
                     const regex = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
 
                     if (regex.test(text)) {
@@ -72,27 +66,25 @@ function showContentBySubmenuId(submenuId) {
                 });
 
                 if (changed) {
-                    const tempSpan = document.createElement('span'); // Geçici bir span oluştur
-                    tempSpan.innerHTML = text; // HTML olarak parse et
-                    node.parentNode.replaceChild(tempSpan, node); // Orijinal metin node'unu yeni HTML ile değiştir
+                    const tempSpan = document.createElement('span');
+                    tempSpan.innerHTML = text;
+                    node.parentNode.replaceChild(tempSpan, node);
                 }
             } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE' && node.nodeName !== 'PRE' && !node.classList.contains('hljs') && !node.classList.contains('api-form-card')) {
-                // SCRIPT, STYLE, PRE (kod blokları) ve zaten işlenmiş form/highlighted.js alanları hariç
-                // diğer elementlerin çocuklarını gez
                 for (let i = 0; i < node.childNodes.length; i++) {
                     highlightTextNodes(node.childNodes[i]);
                 }
             }
         }
 
-        highlightTextNodes(tempDiv); // tempDiv içindeki metinleri tara ve vurgula
+        highlightTextNodes(tempDiv);
         // --- Vurgulama sonu ---
 
         contentEl.innerHTML = `<div class="markdown-content">${tempDiv.innerHTML}</div>`;
-        hljs.highlightAll(); // Yeni eklenen kod bloklarını da vurgula (emin olmak için)
+        hljs.highlightAll();
 
     } else {
-        contentEl.innerHTML = `<h3>${headerTitle}</h3><p>Bu alt menüye ait içerik bulunamadı.</p>`;
+        contentEl.innerHTML = `<p>Bu alt menüye ait içerik bulunamadı.</p>`;
     }
 }
 
@@ -107,12 +99,20 @@ function renderMenuTree() {
         const menuTitle = document.createElement('div');
         menuTitle.className = 'menu-title';
         menuTitle.textContent = menu.title;
+
+        // Font Awesome ok ikonu ekle
+        const arrowIcon = document.createElement('i');
+        arrowIcon.className = 'fas fa-chevron-right'; // Varsayılan olarak sağa bakan ok
+        menuTitle.appendChild(arrowIcon);
+
         menuLi.appendChild(menuTitle);
 
         const relatedSubmenus = submenus.filter(sm => sm.menuId === menu.id);
 
         const submenuUl = document.createElement('ul');
         submenuUl.className = 'submenu-list';
+        // Başlangıçta kapalı olması için 'collapsed' sınıfını eklemiyoruz,
+        // CSS'teki max-height: 0; ile kontrol ediliyor.
 
         relatedSubmenus.forEach(sm => {
             const submenuLi = document.createElement('li');
@@ -129,6 +129,14 @@ function renderMenuTree() {
 
         menuLi.appendChild(submenuUl);
         menuListEl.appendChild(menuLi);
+
+        // Accordion (açma/kapama) özelliği için event listener
+        menuTitle.addEventListener('click', () => {
+            submenuUl.classList.toggle('expanded');
+            // Font Awesome ikonu için dönüş sınıfı
+            arrowIcon.classList.toggle('fa-chevron-right'); // Sağa bakan ok
+            arrowIcon.classList.toggle('fa-chevron-down'); // Aşağı bakan ok
+        });
     });
 }
 
@@ -151,8 +159,45 @@ async function loadData() {
 
         renderMenuTree();
 
+        // Sayfa yüklendiğinde ilk alt menüyü otomatik olarak yükle
+        if (submenus.length > 0) {
+            const firstMenuId = menus.length > 0 ? menus[0].id : null;
+            const firstSubmenuInFirstMenu = submenus.find(sm => sm.menuId === firstMenuId);
+
+            if (firstSubmenuInFirstMenu) {
+                showContentBySubmenuId(firstSubmenuInFirstMenu.id);
+                // İlk menüyü ve alt menüsünü aç
+                const firstMenuTitleEl = menuListEl.querySelector(`.menu-item:first-child .menu-title`);
+                const firstSubmenuUlEl = menuListEl.querySelector(`.menu-item:first-child .submenu-list`);
+
+                if (firstSubmenuUlEl && firstMenuTitleEl) {
+                    firstSubmenuUlEl.classList.add('expanded');
+                    const arrowIcon = firstMenuTitleEl.querySelector('.fas');
+                    if (arrowIcon) {
+                        arrowIcon.classList.remove('fa-chevron-right');
+                        arrowIcon.classList.add('fa-chevron-down');
+                    }
+                }
+            } else if (submenus.length > 0) { // İlk menüde alt menü yoksa, genel ilk alt menüyü aç
+                showContentBySubmenuId(submenus[0].id);
+                const parentSubmenuLi = menuListEl.querySelector(`.submenu-item[data-submenuid='${submenus[0].id}']`);
+                if (parentSubmenuLi) {
+                    const parentMenuTitleEl = parentSubmenuLi.closest('.menu-item').querySelector('.menu-title');
+                    const parentSubmenuUlEl = parentSubmenuLi.closest('.submenu-list');
+                    if (parentSubmenuUlEl && parentMenuTitleEl && !parentSubmenuUlEl.classList.contains('expanded')) {
+                        parentSubmenuUlEl.classList.add('expanded');
+                        const arrowIcon = parentMenuTitleEl.querySelector('.fas');
+                        if (arrowIcon) {
+                            arrowIcon.classList.remove('fa-chevron-right');
+                            arrowIcon.classList.add('fa-chevron-down');
+                        }
+                    }
+                }
+            }
+        }
+
     } catch (error) {
-        contentEl.innerHTML = `<h3>Hata</h3><p>Veriler yüklenirken hata oluştu: ${error.message}</p>`;
+        contentEl.innerHTML = `<p>Veriler yüklenirken hata oluştu: ${error.message}</p>`;
         console.error(error);
     }
 }
