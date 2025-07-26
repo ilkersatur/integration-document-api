@@ -88,7 +88,7 @@ function showContentBySubmenuId(submenuId) {
         highlightTextNodes(tempDiv); // tempDiv içindeki metinleri tara ve vurgula
         // --- Vurgulama sonu ---
 
-        contentEl.innerHTML = `<h3>${headerTitle}</h3><div class="markdown-content">${tempDiv.innerHTML}</div>`;
+        contentEl.innerHTML = `<div class="markdown-content">${tempDiv.innerHTML}</div>`;
         hljs.highlightAll(); // Yeni eklenen kod bloklarını da vurgula (emin olmak için)
 
     } else {
