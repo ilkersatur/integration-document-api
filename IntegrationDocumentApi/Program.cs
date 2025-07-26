@@ -29,6 +29,10 @@ namespace IntegrationDocumentApi
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
             app.MapControllers();
 
             app.Run();

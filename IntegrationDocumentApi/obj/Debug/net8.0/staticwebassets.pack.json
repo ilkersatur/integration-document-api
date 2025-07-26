@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
-      "PackagePath": "staticwebassets\\document\\index.html"
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\app.js",
+      "PackagePath": "staticwebassets\\document\\app.js"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\script.js",
-      "PackagePath": "staticwebassets\\document\\script.js"
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
+      "PackagePath": "staticwebassets\\document\\index.html"
     },
     {
       "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\style.css",

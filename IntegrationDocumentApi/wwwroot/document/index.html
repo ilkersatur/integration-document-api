@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Döküman Oluşturucu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document Builder UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <h2>Menüler</h2>
-      <ul id="menuList"></ul>
-      <button onclick="addMenu()">+ Menü Ekle</button>
-    </aside>
-    <main class="content">
-      <h2 id="contentTitle">İçerik</h2>
-      <div id="contentArea">Bir alt menü seçiniz...</div>
-      <textarea id="contentInput" placeholder="İçeriği buraya yazın..."></textarea>
-      <button onclick="saveContent()">İçeriği Kaydet</button>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-4 border-end" style="height: 90vh; overflow-y: auto;">
+                <h4>Menüler</h4>
+                <button id="btnAddMenu" class="btn btn-primary btn-sm mb-2">Yeni Menü Ekle</button>
+                <ul id="menuList" class="list-group"></ul>
+            </div>
+
+            <div class="col-md-8">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 id="contentTitle">İçerik</h4>
+                    <button id="btnAddSubmenu" class="btn btn-secondary btn-sm" disabled>Yeni Alt Menü Ekle</button>
+                </div>
+
+                <textarea id="contentInput" class="form-control mb-3" rows="10" placeholder="İçeriği buraya yazın..." disabled></textarea>
+                <button id="btnSaveContent" class="btn btn-success" disabled>Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WxzSNvTghbbnSmNC4rOxU8OACGf9PP0ZEU8uG4ztMBg=",
+  "Hash": "KmxDpfmiYvLfs4RMiGY8YQrzKUjT0L0Md0XERmxeNDc=",
   "Source": "IntegrationDocumentApi",
   "BasePath": "_content/IntegrationDocumentApi",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\app.js",
+      "SourceId": "IntegrationDocumentApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
+      "BasePath": "_content/IntegrationDocumentApi",
+      "RelativePath": "document/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\document\\app.js"
+    },
     {
       "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
       "SourceId": "IntegrationDocumentApi",
@@ -34,25 +53,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\document\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\script.js",
-      "SourceId": "IntegrationDocumentApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
-      "BasePath": "_content/IntegrationDocumentApi",
-      "RelativePath": "document/script.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\document\\script.js"
     },
     {
       "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\style.css",
