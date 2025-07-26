@@ -14,6 +14,18 @@ namespace IntegrationDocumentApi.Controllers
             (m, id) => m.Id = id
         );
 
+        private readonly JsonDataService<Submenu> _submenuService = new(
+            "Data/submenus.json",
+            s => s.Id,
+            (s, id) => s.Id = id
+        );
+
+        private readonly JsonDataService<ContentEntry> _contentService = new(
+            "Data/contents.json",
+            m => m.Id,
+            (m, id) => m.Id = id
+        );
+
         [HttpGet]
         public IActionResult GetAll() => Ok(_service.Load());
 
@@ -47,14 +59,33 @@ namespace IntegrationDocumentApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var list = _service.Load();
-            var menu = list.FirstOrDefault(m => m.Id == id);
+            var menus = _service.Load();
+            var menu = menus.FirstOrDefault(m => m.Id == id);
             if (menu == null) return NotFound();
 
-            list.Remove(menu);
-            _service.Save(list);
+            // Alt menüleri ve içeriklerini yükle
+            var submenus = _submenuService.Load().Where(s => s.MenuId == id).ToList();
+            var contents = _contentService.Load();
+
+            // Alt menülerin içeriklerini sil
+            foreach (var submenu in submenus)
+            {
+                contents.RemoveAll(c => c.SubmenuId == submenu.Id);
+            }
+            _contentService.Save(contents);
+
+            // Alt menüleri sil
+            var allSubmenus = _submenuService.Load();
+            allSubmenus.RemoveAll(s => s.MenuId == id);
+            _submenuService.Save(allSubmenus);
+
+            // Menü sil
+            menus.Remove(menu);
+            _service.Save(menus);
+
             return NoContent();
         }
+
     }
 
 }

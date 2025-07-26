@@ -48,13 +48,29 @@ namespace IntegrationDocumentApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var list = _service.Load();
-            var submenu = list.FirstOrDefault(s => s.Id == id);
+            var submenus = _service.Load();
+            var submenu = submenus.FirstOrDefault(s => s.Id == id);
             if (submenu == null) return NotFound();
 
-            list.Remove(submenu);
-            _service.Save(list);
+            // İçerik servisini oluştur (eğer controller'da yoksa ekle)
+            var contentService = new JsonDataService<ContentEntry>(
+                "Data/contents.json",
+                c => c.Id,
+                (c, newId) => c.Id = newId
+            );
+
+            var contents = contentService.Load();
+
+            // Bu alt menüye ait içerikleri sil
+            contents.RemoveAll(c => c.SubmenuId == id);
+            contentService.Save(contents);
+
+            // Alt menüyü sil
+            submenus.Remove(submenu);
+            _service.Save(submenus);
+
             return NoContent();
         }
+
     }
 }
