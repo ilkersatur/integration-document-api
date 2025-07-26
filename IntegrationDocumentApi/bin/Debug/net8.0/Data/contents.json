@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "Id": 1,
+    "SubmenuId": 1,
+    "Text": "\u0130\u00E7erik 1"
+  },
+  {
+    "Id": 2,
+    "SubmenuId": 2,
+    "Text": "\u0130\u00E7erik 2"
+  },
+  {
+    "Id": 3,
+    "SubmenuId": 3,
+    "Text": "\u0130\u00E7erik 3"
+  }
+]

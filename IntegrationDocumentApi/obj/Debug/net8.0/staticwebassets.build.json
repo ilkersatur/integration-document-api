@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KmxDpfmiYvLfs4RMiGY8YQrzKUjT0L0Md0XERmxeNDc=",
+  "Hash": "RS69GhPVgdHYDVg3WPjR80mKed5OcvYfp0H8U2o+YHY=",
   "Source": "IntegrationDocumentApi",
   "BasePath": "_content/IntegrationDocumentApi",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\app.js",
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\app.js",
       "SourceId": "IntegrationDocumentApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
       "BasePath": "_content/IntegrationDocumentApi",
-      "RelativePath": "document/app.js",
+      "RelativePath": "app.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\document\\app.js"
+      "OriginalItemSpec": "wwwroot\\app.js"
     },
     {
-      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
       "SourceId": "IntegrationDocumentApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
       "BasePath": "_content/IntegrationDocumentApi",
-      "RelativePath": "document/index.html",
+      "RelativePath": "document/document.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\document\\index.html"
+      "OriginalItemSpec": "wwwroot\\document\\document.css"
     },
     {
-      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\style.css",
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
       "SourceId": "IntegrationDocumentApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
       "BasePath": "_content/IntegrationDocumentApi",
-      "RelativePath": "document/style.css",
+      "RelativePath": "document/document.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,64 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\document\\style.css"
+      "OriginalItemSpec": "wwwroot\\document\\document.html"
+    },
+    {
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.js",
+      "SourceId": "IntegrationDocumentApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
+      "BasePath": "_content/IntegrationDocumentApi",
+      "RelativePath": "document/document.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\document\\document.js"
+    },
+    {
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\index.html",
+      "SourceId": "IntegrationDocumentApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
+      "BasePath": "_content/IntegrationDocumentApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
+      "SourceId": "IntegrationDocumentApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\",
+      "BasePath": "_content/IntegrationDocumentApi",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ]
 }

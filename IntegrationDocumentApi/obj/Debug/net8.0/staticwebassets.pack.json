@@ -1,16 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\app.js",
-      "PackagePath": "staticwebassets\\document\\app.js"
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
-      "PackagePath": "staticwebassets\\document\\index.html"
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
+      "PackagePath": "staticwebassets\\document\\document.css"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\style.css",
-      "PackagePath": "staticwebassets\\document\\style.css"
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
+      "PackagePath": "staticwebassets\\document\\document.html"
+    },
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.js",
+      "PackagePath": "staticwebassets\\document\\document.js"
+    },
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IntegrationDocumentApi.Microsoft.AspNetCore.StaticWebAssets.props",

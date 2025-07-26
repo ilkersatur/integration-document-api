@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "Id": 1,
+    "MenuId": 1,
+    "Title": "Alt Men\u00FC 1"
+  },
+  {
+    "Id": 2,
+    "MenuId": 2,
+    "Title": "Alt Men\u00FC 1"
+  },
+  {
+    "Id": 3,
+    "MenuId": 2,
+    "Title": "Alt Men\u00FC 2"
+  }
+]
