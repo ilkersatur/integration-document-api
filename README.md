@@ -38,14 +38,6 @@ This project is a frontend application and needs to be served via a web server. 
     * `API_SUBMENUS = 'https://localhost:7179/api/submenus'`
     * `API_CONTENTS = 'https://localhost:7179/api/contents'`
     Please ensure your API project (e.g., a .NET Core Web API project) is running at the specified addresses.
-3.  **Use a Local Server:**
-    You need to serve the project files (index.html, document.css, document.js) through a web server. You can use Python's simple HTTP server:
-    ```bash
-    # From the project root directory
-    python -m http.server 8000
-    ```
-    Then, navigate to `http://localhost:8000` in your browser to view the application.
-    Alternatively, you can use a "Live Server" extension in IDEs like Visual Studio Code.
 
 ## API Structure
 
