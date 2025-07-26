@@ -2,6 +2,8 @@
 
 This project is a document management interface with a simple menu navigation, dynamically displaying content fetched from an API. It features a tree-like menu (main menus and submenus) on the left, while the right panel renders Markdown content corresponding to the selected submenu, presenting it with a modern aesthetic. It automatically formats form fields and highlights specific keywords from API responses to enhance readability.
 
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/1.png">
+
 ## Features
 
 * **Dynamic Menu Generation:** Menus and submenus are dynamically fetched from a REST API to construct the left-hand side menu tree.
@@ -13,6 +15,10 @@ This project is a document management interface with a simple menu navigation, d
 * **Modern and Responsive Design:** Utilizes contemporary CSS techniques for a clean and modern UI/UX. The design is responsive, adapting to various screen sizes.
 * **API Integration:** All menu, submenu, and content data are fetched from a specified REST API endpoint.
 
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/2.png">
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/3.png">
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/4.png">
+
 ## Technologies Used
 
 * **HTML5:** The structural foundation of the project.
@@ -22,6 +28,9 @@ This project is a document management interface with a simple menu navigation, d
 * **Highlight.js:** For adding syntax highlighting to code blocks.
 * **Font Awesome:** Provides scalable vector icons for menu expand/collapse functionality.
 * **Google Fonts (Inter):** For a modern typography experience.
+
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/5.png">
+<img src="https://github.com/ilkersatur/integration-document-api/blob/main/6.png">
 
 ## Setup and Running
 
