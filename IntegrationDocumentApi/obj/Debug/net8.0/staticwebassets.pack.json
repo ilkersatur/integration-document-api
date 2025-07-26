@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\index.html",
+      "PackagePath": "staticwebassets\\document\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\script.js",
+      "PackagePath": "staticwebassets\\document\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\style.css",
+      "PackagePath": "staticwebassets\\document\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.IntegrationDocumentApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.IntegrationDocumentApi.props",
+      "PackagePath": "build\\IntegrationDocumentApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.IntegrationDocumentApi.props",
+      "PackagePath": "buildMultiTargeting\\IntegrationDocumentApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.IntegrationDocumentApi.props",
+      "PackagePath": "buildTransitive\\IntegrationDocumentApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
