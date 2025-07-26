@@ -32,3 +32,6 @@ C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\obj\Debu
 C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\obj\Debug\net8.0\IntegrationDocumentApi.pdb
 C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\obj\Debug\net8.0\IntegrationDocumentApi.genruntimeconfig.cache
 C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\obj\Debug\net8.0\ref\IntegrationDocumentApi.dll
+C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\bin\Debug\net8.0\Data\contents.json
+C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\bin\Debug\net8.0\Data\menus.json
+C:\Users\ilkers\Desktop\integration-document-api\IntegrationDocumentApi\bin\Debug\net8.0\Data\submenus.json
