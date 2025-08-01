@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\app.js",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\app.js",
       "PackagePath": "staticwebassets\\app.js"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.css",
       "PackagePath": "staticwebassets\\document\\document.css"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.html",
       "PackagePath": "staticwebassets\\document\\document.html"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.js",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\document\\document.js",
       "PackagePath": "staticwebassets\\document\\document.js"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\index.html",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\ilkers\\Desktop\\integration-document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
+      "Id": "C:\\Users\\ilkers\\Desktop\\document-api\\IntegrationDocumentApi\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {

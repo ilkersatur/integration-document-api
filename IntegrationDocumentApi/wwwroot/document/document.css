@@ -108,21 +108,21 @@ ul.menu-list {
         transform: rotate(-90deg); /* Menü kapalıysa sola dönsün */
     }
 
-/* Alt Menüler (Submenu) */
-ul.submenu-list {
-    list-style: none;
-    padding-left: 20px; /* Daha belirgin girinti */
-    margin-top: 8px; /* Başlıktan sonra hafif boşluk */
-    border-left: 2px solid #55708f; /* Koyu menüye uygun renk */
-    overflow: hidden;
+.submenu-list {
     max-height: 0;
-    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 8px;
 }
 
-    ul.submenu-list.expanded {
-        max-height: 500px; /* Yeterince büyük bir değer */
+    .submenu-list.expanded {
+        max-height: 500px; /* genişleme */
         transition: max-height 0.5s ease-in;
     }
+
+
 
     ul.submenu-list li.submenu-item {
         margin: 6px 0;
@@ -140,7 +140,7 @@ ul.submenu-list {
         }
 
         ul.submenu-list li.submenu-item.active {
-            background-color: #3498db; /* Canlı mavi aktif renk */
+            background-color: #3498db;
             color: white;
             font-weight: 600;
         }
@@ -320,10 +320,6 @@ ul.submenu-list {
         padding: 8px;
     }
 
-    ul.submenu-list {
-        padding-left: 15px;
-    }
-
         ul.submenu-list li.submenu-item {
             font-size: 0.9rem;
             padding: 6px 8px;
@@ -381,4 +377,132 @@ pre {
     line-height: 1.5em;
     margin-bottom: 2.5em;
     border: 1px solid #444;
+}
+
+/* Arama Kutusu */
+.search-container {
+    margin-bottom: 30px;
+}
+
+#menuSearchInput {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #3a506a;
+    background-color: #1f2f40;
+    color: #ecf0f1;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+    #menuSearchInput::placeholder {
+        color: #95a5a6;
+    }
+
+    #menuSearchInput:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+
+    #menuSearchInput:hover {
+        cursor: text;
+    }
+
+#contentSearchContainer {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: 250px;
+}
+
+#contentSearchInput {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+    #contentSearchInput:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+
+.highlighted-text {
+    background-color: yellow !important;
+    color: black !important;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 3px;
+    display: inline;
+}
+
+ul.submenu-headings li.submenu-heading-item {
+    background-color: transparent !important;
+    color: #7da5cc;
+    font-weight: normal;
+}
+
+    ul.submenu-headings li.submenu-heading-item[data-level="2"] {
+        padding-left: 16px;
+    }
+
+    ul.submenu-headings li.submenu-heading-item[data-level="3"] {
+        padding-left: 24px;
+        font-size: 0.8rem;
+        color: #5a7aa0;
+    }
+
+ul.submenu-headings {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 6px;
+    border-left: 2px solid #7da5cc;
+    max-height: none !important; /* Bunu ekle */
+    overflow: visible !important; /* Bunu ekle */
+}
+
+ul.submenu-list > li.submenu-headings-wrapper {
+    padding-left: 20px;
+    margin-top: 6px;
+    list-style: none;
+}
+
+ul.submenu-headings-wrapper ul.submenu-headings {
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.submenu-headings li.submenu-heading-item {
+    /* Eskiden kalan stiller */
+}
+
+.submenu-heading-item {
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+    .submenu-heading-item:hover {
+        background-color: #e0e0e0 !important;
+        color: #fff !important;
+    }
+
+ul.submenu-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+ul.submenu-list::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
 }

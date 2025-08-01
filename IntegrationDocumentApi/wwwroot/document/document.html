@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Doküman UI - Menü & İçerik</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo_big.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
@@ -14,19 +15,28 @@
 <body>
     <div class="app-wrapper">
         <aside id="sidebar">
-            <h2>Menüler</h2>
+            <h2>Sanal Pos Dökümanı</h2>
+            <div class="search-container">
+                <input type="text" id="menuSearchInput" placeholder="Ara..." />
+            </div>
             <ul class="menu-list" id="menuList">
             </ul>
+            <button id="btnGeneratePdf" style="margin-top: 15px; padding: 10px; font-size: 16px;">
+                PDF Oluştur ve İndir
+            </button>
         </aside>
 
         <main id="content">
-            <h3>İçerik</h3>
-            <p>Sol taraftan bir alt menü seçiniz.</p>
         </main>
     </div>
 
-    <script src="document.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <div id="contentSearchContainer">
+        <input type="text" id="contentSearchInput" placeholder="İçerikte ara..." />
+    </div>
+
+    <script src="document.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </body>

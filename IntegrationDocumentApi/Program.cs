@@ -1,3 +1,6 @@
+﻿using DinkToPdf.Contracts;
+using DinkToPdf;
+using IntegrationDocumentApi.Data;
 
 namespace IntegrationDocumentApi
 {
@@ -7,33 +10,48 @@ namespace IntegrationDocumentApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddAuthorization();
-
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
             builder.Services.AddControllers();
+
+            var wkhtmlPath = Path.Combine(Directory.GetCurrentDirectory(), "libwkhtmltox", "libwkhtmltox.dll");
+            CustomAssemblyLoadContext context = new CustomAssemblyLoadContext();
+            context.LoadUnmanagedLibrary(wkhtmlPath);
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            if (app.Environment.IsProduction())
             {
-                app.UseSwagger();
+                app.UsePathBase("/Vpos/V1/VposDocument");
+            }
+
+            app.UseSwagger();
+
+            if (app.Environment.IsProduction())
+            {
+                app.UseSwaggerUI(c =>
+                {
+                    // ❗ Relative path olmalı, başında "/" yok!
+                    c.SwaggerEndpoint("swagger.json", "IntegrationDocumentApi V1");
+                    c.RoutePrefix = "swagger";
+                });
+            }
+            else
+            {
                 app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
+            app.UseRouting();
             app.UseAuthorization();
 
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.MapControllers();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
 
             app.Run();
         }

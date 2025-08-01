@@ -2,16 +2,51 @@
   {
     "Id": 1,
     "MenuId": 1,
-    "Title": "Alt Men\u00FC 1"
+    "Title": "Sanal Pos Nedir?"
   },
   {
     "Id": 2,
-    "MenuId": 2,
-    "Title": "Alt Men\u00FC 1"
+    "MenuId": 1,
+    "Title": "Sistemin Genel \u00C7al\u0131\u015Fma Yap\u0131s\u0131"
   },
   {
     "Id": 3,
+    "MenuId": 1,
+    "Title": "\u0130\u015Flem Ak\u0131\u015Flar\u0131"
+  },
+  {
+    "Id": 4,
+    "MenuId": 1,
+    "Title": "Entegrasyon Y\u00F6ntemleri"
+  },
+  {
+    "Id": 5,
+    "MenuId": 1,
+    "Title": "Backoffice Login"
+  },
+  {
+    "Id": 6,
     "MenuId": 2,
-    "Title": "Alt Men\u00FC 2"
+    "Title": "Eri\u015Fim Adresleri"
+  },
+  {
+    "Id": 7,
+    "MenuId": 3,
+    "Title": "Everest VPOS Gateway Servisleri"
+  },
+  {
+    "Id": 9,
+    "MenuId": 4,
+    "Title": "\u00D6rnek Alt Men\u00FC 1"
+  },
+  {
+    "Id": 10,
+    "MenuId": 4,
+    "Title": "\u00D6rnek Alt Men\u00FC 2"
+  },
+  {
+    "Id": 11,
+    "MenuId": 4,
+    "Title": "\u00D6rnek Alt Men\u00FC 3"
   }
 ]
